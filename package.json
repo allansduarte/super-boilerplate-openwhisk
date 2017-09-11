@@ -1,0 +1,51 @@
+{
+  "name": "super-boilerplate-openwhisk",
+  "version": "0.0.0",
+  "description": "An Openwhisk Starter kit featuring Openwhisk, Typescript, Webpack and more.",
+  "main": "handler.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --progress --colors",
+    "cz": "git-cz",
+    "deploy": "serverless deploy",
+    "precommit": "npm run lint",
+    "predeploy": "npm run build",
+    "push": "git push --follow-tags origin master",
+    "release": "standard-version --no-verify",
+    "lint": "tslint \"src/**/*.ts\" --type-check --project ./tsconfig.json",
+    "outdated": "npm outdated --depth 0",
+    "commitmsg": "validate-commit-msg"
+  },
+  "keywords": [
+    "serverless",
+    "openwhisk",
+    "webpack",
+    "typescript",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "standard-version": "4.2.0",
+    "ts-loader": "2.3.7",
+    "tslint": "5.7.0",
+    "typescript": "2.5.2",
+    "validate-commit-msg": "2.14.0",
+    "webpack": "3.5.6",
+    "webpack-node-externals": "1.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allansduarte/super-boilerplate-openwhisk"
+  },
+  "bugs": {
+    "url": "https://github.com/allansduarte/super-boilerplate-openwhisk/issues"
+  }
+}
